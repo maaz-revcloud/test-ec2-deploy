@@ -21,4 +21,4 @@ fi
 cd /home/ubuntu/ec2-deploy-test
 
 $NODE_PATH $NPM_PATH install
-$PM2_PATH restart index.js
+$NODE_PATH $PM2_PATH restart index.js
