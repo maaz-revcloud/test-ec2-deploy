@@ -19,4 +19,4 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Deploy to EC2
-      run: ./scripts/deploy.sh
+      run: ./.scripts/deploy.sh
