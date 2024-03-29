@@ -30,7 +30,7 @@ app.get('/start-complex-process', (req, res) => {
 });
 
 app.get('/health-check', (req, res) => {
-    res.send('100% Health!!')
+    res.send('100% Health!!!')
 })
 
 // Start the server
