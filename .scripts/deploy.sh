@@ -12,7 +12,7 @@ ls
 sudo su -
 
 
-# NODE_PATH=/root/.nvm/versions/node/v20.11.0/bin/node  install
+NODE_PATH=/root/.nvm/versions/node/v20.11.0/bin/node
 
 # # Define full paths to npm and pm2
 NPM_PATH=/root/.nvm/versions/node/v20.11.0/bin/npm # Replace this with the actual path to npm if different
@@ -20,10 +20,11 @@ NPM_PATH=/root/.nvm/versions/node/v20.11.0/bin/npm # Replace this with the actua
 
 if [ ! -x "$NPM_PATH" ]; then
     echo "Granting execute permissions to npm..."
+    sudo chmod +x "$NODE_PATH"
     sudo chmod +x "$NPM_PATH"
 fi
 
-$NPM_PATH install
+$NODE_PATH $NPM_PATH install
 
 # # Install dependencies using npm
 # $NPM_PATH install
