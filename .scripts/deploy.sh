@@ -9,6 +9,8 @@ cd /home/ubuntu/ec2-deploy-test
 # Pull the latest changes from the main branch
 git pull origin main
 ls
+ls -l /root/.nvm/versions/node/v20.11.0/bin/npm
+
 
 # NODE_PATH=/root/.nvm/versions/node/v20.11.0/bin/node  install
 
