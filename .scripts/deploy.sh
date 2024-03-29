@@ -20,8 +20,8 @@ export NVM_DIR="/root/.nvm"
 cd /home/ubuntu/ec2-deploy-test || exit
 
 # Install dependencies using npm
-npm install || { echo "Failed to install npm dependencies"; exit 1; }
+/root/.nvm/versions/node/$(node -v)/bin/npm install || { echo "Failed to install npm dependencies"; exit 1; }
 
 # Restart the application using pm2
-pm2 restart index.js || { echo "Failed to restart the application using pm2"; exit 1; }
+/root/.nvm/versions/node/$(node -v)/bin/pm2 restart index.js || { echo "Failed to restart the application using pm2"; exit 1; }
 EOF
