@@ -2,7 +2,7 @@
 
 cd /home/ubuntu/ec2-deploy-test
 git pull origin main
-npm install  
+su sudo - && npm install  
 
 sudo su - <<EOF
 cd /home/ubuntu/ec2-deploy-test
