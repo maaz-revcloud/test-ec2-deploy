@@ -24,6 +24,8 @@ if [ ! -x "$NPM_PATH" ]; then
     sudo chmod +x "$NPM_PATH"
 fi
 
+cd /home/ubuntu/ec2-deploy-test
+
 $NODE_PATH $NPM_PATH install
 
 # # Install dependencies using npm
