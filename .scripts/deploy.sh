@@ -1,12 +1,19 @@
 #!/bin/bash
 
-cd /home/ubuntu/ec2-deploy-test
-git pull origin main
-sudo su - && npm install  && pm2 restart index.js 
+# Define the path to npm (adjust this according to your system setup)
+NPM_PATH=$(which npm)
 
-# sudo su - <<EOF
-# cd /home/ubuntu/ec2-deploy-test
-# ls
-# npm install   
-# pm2 restart index.js 
-# EOF
+# Change directory to the project directory
+cd /home/ubuntu/ec2-deploy-test
+
+# Ensure npm is available in the PATH
+export PATH=$PATH:/path/to/npm/bin   # Adjust this path according to your system setup
+
+# Pull the latest changes from the main branch
+git pull origin main
+
+# Install dependencies using npm
+$NPM_PATH install
+
+# Restart the application using pm2
+pm2 restart index.js
