@@ -11,6 +11,11 @@ git pull origin main || { echo "Failed to pull latest changes from git repositor
 
 # Switch to root user and execute commands
 sudo su - <<EOF
+# Ensure Node.js and npm environment variables are set
+export NVM_DIR="/root/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Navigate to the project directory
 cd /home/ubuntu/ec2-deploy-test || exit
 
