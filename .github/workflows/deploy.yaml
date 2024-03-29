@@ -17,6 +17,6 @@ jobs:
       uses: webfactory/ssh-agent@v0.5.3
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
+    
     - name: Deploy to EC2
-      run: ./.scripts/deploy.sh
+      run: ssh -o StrictHostKeyChecking=no ubuntu@ec2-35-85-46-253.us-west-2.compute.amazonaws.com 'bash -s' < ./.scripts/deploy.sh
