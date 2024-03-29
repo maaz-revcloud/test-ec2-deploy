@@ -1,12 +1,10 @@
 #!/bin/bash
 
-export PATH="$PATH:/usr/local/bin"  # Add /usr/local/bin to PATH
-
 cd /home/ubuntu/ec2-deploy-test
 git pull origin main
 
 sudo su <<EOF
 cd /home/ubuntu/ec2-deploy-test
-npm install
-pm2 restart index.js
+/root/.nvm/versions/node/v20.11.0/bin/npm/npm install   
+/root/.nvm/versions/node/v20.11.0/bin/pm2 restart index.js 
 EOF
