@@ -3,6 +3,12 @@
 # Define the path to npm (adjust this according to your system setup)
 NPM_PATH=$(which npm)
 
+# Define the path to pm2 (adjust this according to your system setup)
+PM2_PATH=$(which pm2)
+
+# Source the user's bash profile to ensure environment setup, including PATH, is loaded
+source ~/.bash_profile  # or ~/.bashrc depending on the user's setup
+
 # Change directory to the project directory
 cd /home/ubuntu/ec2-deploy-test
 
@@ -16,4 +22,4 @@ git pull origin main
 $NPM_PATH install
 
 # Restart the application using pm2
-pm2 restart index.js
+$PM2_PATH restart index.js
