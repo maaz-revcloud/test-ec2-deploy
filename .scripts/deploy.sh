@@ -18,7 +18,7 @@ NPM_PATH=/root/.nvm/versions/node/v20.11.0/bin/npm # Replace this with the actua
 
 if [ ! -x "$NPM_PATH" ]; then
     echo "Granting execute permissions to npm..."
-    chmod +x "$NPM_PATH"
+    sudo chmod +x "$NPM_PATH"
 fi
 
 $NPM_PATH install
